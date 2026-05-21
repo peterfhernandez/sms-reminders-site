@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Reminders</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #2563eb;
+      --brand-dark: #1e40af;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --max: 780px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--brand);
+      color: var(--white);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.5px; }
+    header p  { margin-top: 0.5rem; font-size: 1.1rem; opacity: 0.9; }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.9rem 1.25rem;
+      border-bottom: 3px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    nav a:hover { color: var(--brand); }
+    nav a.active { color: var(--brand); border-bottom-color: var(--brand); }
+
+    /* ── Main layout ── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section { margin-bottom: 4rem; }
+    section:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { margin: 0.5rem 0 1rem 1.5rem; }
+    li { margin-bottom: 0.35rem; }
+
+    /* ── Contact card ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .contact-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+    }
+    .contact-item .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+    .contact-item a { color: var(--brand); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SMS Reminders</h1>
+    <p>Automated SMS reminder solutions for individuals and businesses</p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About SMS Reminders</h2>
+      <p>
+        SMS Reminders is an Australian-based service that helps individuals and businesses send
+        timely, automated SMS notifications and reminders to their customers, clients, or contacts.
+      </p>
+      <p>
+        Whether you need to reduce no-shows, follow up on appointments, or keep your audience
+        informed, SMS Reminders delivers reliable text message communications on your behalf.
+      </p>
+      <p>Our services include:</p>
+      <ul>
+        <li>Automated appointment and event reminders</li>
+        <li>Scheduled SMS broadcasts to contact lists</li>
+        <li>Custom reminder workflows for businesses</li>
+        <li>Two-way SMS communication support</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>We'd love to hear from you. Reach out through any of the channels below.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="label">Business Name</div>
+          SMS Reminders
+        </div>
+        <div class="contact-item">
+          <div class="label">Email</div>
+          <a href="mailto:peter@hernandez.id.au">peter@hernandez.id.au</a>
+        </div>
+        <div class="contact-item">
+          <div class="label">Phone</div>
+          <a href="tel:+61487403140">+61 487 403 140</a>
+        </div>
+        <div class="contact-item">
+          <div class="label">Address</div>
+          23/65 Station St<br />Malvern VIC 3144<br />Australia
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SMS Reminders &mdash; 23/65 Station St, Malvern VIC 3144, Australia</p>
+    <p style="margin-top:0.25rem;">
+      <a href="privacy.html">Privacy Policy</a> &middot;
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+  </footer>
+
+</body>
+</html>
